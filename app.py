@@ -8,6 +8,9 @@ import MySQLdb
 load_dotenv()
 
 app = Flask(__name__, template_folder='flaskapp/templates')
+# template_folder, static_folder 의 이름을 templates, static 으로 할 시 자동 인식됨
+# 다만 폴더의 루트 위치에 존재할 때만 그러함
+# 지금처럼 하위폴더 안에 있는 구조라면 수동으로 경로를 작성해줘야함
 CORS(app)
 
 def get_db_connection():
