@@ -7,7 +7,7 @@ import MySQLdb
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='flaskapp/templates')
 CORS(app)
 
 def get_db_connection():
